@@ -13,7 +13,6 @@
     --white:#ffffff;
     --glass: rgba(255,255,255,0.12);
   }
-
   html,body{
     height:100%;
     margin:0;
@@ -21,7 +20,6 @@
     background: linear-gradient(120deg, #ffeef8 0%, #ffe3f2 30%, #ffb6da 70%, #ffc9f0 100%);
     overflow:hidden;
   }
-
   .hearts { position:fixed; inset:0; pointer-events:none; }
   .heart {
     position:absolute;
@@ -36,96 +34,42 @@
     10%{ opacity:1;}
     100%{ transform: translateY(-140vh) scale(1.2); opacity:0;}
   }
-
-  .wrap{
-    min-height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px 20px;
-  }
-
+  .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px 20px;}
   .card{
-    width:100%;
-    max-width:760px;
+    width:100%;max-width:760px;
     background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.78));
-    border-radius:20px;
-    padding:28px;
+    border-radius:20px;padding:28px;
     box-shadow: 0 20px 60px rgba(255,102,170,0.14), inset 0 1px 0 rgba(255,255,255,0.6);
     backdrop-filter: blur(6px);
-    position:relative;
-    overflow:visible;
+    position:relative;overflow:visible;
     transform: translateY(-10px);
     transition: transform .6s cubic-bezier(.2,.9,.3,1);
   }
   .card:hover{ transform: translateY(-6px); }
-
-  .kitty {
-    width:72px; height:72px;
-    background: radial-gradient(circle at 30% 30%, #fff, #ffe2ef 60%);
-    border-radius:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow: 0 8px 30px rgba(255,0,140,0.08);
-    border: 2px solid rgba(255,255,255,0.6);
-    overflow:hidden;
-  }
-  .kitty img{
-    width:64px;
-    height:64px;
-    object-fit: contain;
-  }
-
+  .kitty {width:72px; height:72px;background: radial-gradient(circle at 30% 30%, #fff, #ffe2ef 60%);
+    border-radius:22px;display:flex;align-items:center;justify-content:center;
+    box-shadow: 0 8px 30px rgba(255,0,140,0.08);border: 2px solid rgba(255,255,255,0.6);overflow:hidden;}
+  .kitty img{width:64px;height:64px;object-fit: contain;}
   .title{ font-size:22px; color:var(--accent); font-weight:700; letter-spacing:0.4px; }
   .subtitle{ color:#8a3a5d; font-size:14px; margin-top:6px; }
-
   form { margin-top:18px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
   label { flex-basis:100%; font-size:13px; color:#7d3756; font-weight:600; }
-
   .input {
-    flex:1 1 320px;
-    display:flex;
-    gap:10px;
-    align-items:center;
-    padding:8px 12px;
-    background: var(--pink-1);
-    border-radius:10px;
-    border: 1px solid rgba(255,255,255,0.6);
-    box-shadow: 0 6px 18px rgba(255,102,170,0.05) inset;
+    flex:1 1 320px;display:flex;gap:10px;align-items:center;
+    padding:8px 12px;background: var(--pink-1);border-radius:10px;
+    border: 1px solid rgba(255,255,255,0.6);box-shadow: 0 6px 18px rgba(255,102,170,0.05) inset;
   }
-  .input input{
-    border:0;
-    outline:none;
-    background:transparent;
-    font-size:16px;
-    color:#4a2a3b;
-    width:100%;
-  }
-
+  .input input{border:0;outline:none;background:transparent;font-size:16px;color:#4a2a3b;width:100%;}
   .actions{ display:flex; gap:12px; align-items:center; }
   .btn {
     background:linear-gradient(90deg,var(--pink-3), var(--accent));
-    padding:10px 18px;
-    color:var(--white);
-    font-weight:700;
-    border-radius:12px;
-    border:none;
-    cursor:pointer;
-    box-shadow: 0 10px 30px rgba(255,77,148,0.18);
+    padding:10px 18px;color:var(--white);font-weight:700;border-radius:12px;
+    border:none;cursor:pointer;box-shadow: 0 10px 30px rgba(255,77,148,0.18);
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .btn:hover{ transform: translateY(-4px); box-shadow:0 18px 40px rgba(255,77,148,0.25); }
-
   .hint { font-size:13px; color:#8b3a62; opacity:0.95; }
-
-  .sparkles {
-    position:absolute;
-    right:16px;
-    top:12px;
-    display:flex;
-    gap:6px;
-  }
+  .sparkles {position:absolute;right:16px;top:12px;display:flex;gap:6px;}
   .spark { font-size:14px; opacity:0.9; animation: pop .9s infinite; }
   .spark:nth-child(2){ animation-delay:.2s }
   .spark:nth-child(3){ animation-delay:.4s }
@@ -134,72 +78,37 @@
     50%{ transform: scale(1.2) translateY(-4px); opacity:1 }
     100%{ transform: scale(.9) translateY(0); opacity:.6 }
   }
-
   .error{ color:#b2003b; font-size:13px; margin-top:8px; }
-
   .footer-note{ margin-top:18px; font-size:13px; color:#7a3656; display:flex; gap:10px; align-items:center; }
   a.backlink{ color: #7a3656; text-decoration:none; font-weight:600; }
-
-  /* decor hello kitty */
-  .decor {
-    position:absolute;
-    width:70px;
-    opacity:0.9;
-  }
+  .decor {position:absolute;width:70px;opacity:0.9;}
   .decor.top-left { top:-25px; left:-25px; transform:rotate(-15deg); }
   .decor.bottom-right { bottom:-25px; right:-25px; transform:rotate(15deg); }
-
-  @media (max-width:520px){
-    .kitty{width:56px;height:56px}
-    .kitty img{width:48px;height:48px}
-    .title{font-size:18px}
-  }
 </style>
 </head>
 <body>
   <div class="hearts" id="hearts"></div>
-
   <div class="wrap">
-    <div class="card" role="region" aria-label="Acceso a carta romantica">
-
-      <!-- decor hello kitty -->
+    <div class="card">
       <img src="hello.png" alt="Hello Kitty" class="decor top-left" />
       <img src="https://pngimg.com/d/hello_kitty_PNG20.png" alt="Hello Kitty" class="decor bottom-right" />
-
       <div class="header">
-        <div class="kitty" aria-hidden="true">
-          <img src="https://pngimg.com/d/hello_kitty_PNG22.png" alt="Hello Kitty" />
-        </div>
-
+        <div class="kitty"><img src="https://pngimg.com/d/hello_kitty_PNG22.png" alt="Hello Kitty" /></div>
         <div>
           <div class="title">Carta privada para Alejandra</div>
           <div class="subtitle">Introduce la fecha en que nos volvimos novios para ver la carta</div>
         </div>
-
-        <div class="sparkles" aria-hidden="true">
-          <div class="spark">✨</div>
-          <div class="spark">🌸</div>
-          <div class="spark">💖</div>
-        </div>
+        <div class="sparkles"><div class="spark">✨</div><div class="spark">🌸</div><div class="spark">💖</div></div>
       </div>
-
-      <form id="passForm" onsubmit="return false;" aria-label="Formulario de acceso">
+      <form id="passForm" onsubmit="return false;">
         <label for="clave">Fecha (ej: 23/08/2025)</label>
-
-        <div class="input" title="Introduce la fecha exacta">
-          <input id="clave" autocomplete="off" placeholder="23/08/2025  o  23 de agosto de 2025" />
-        </div>
-
+        <div class="input"><input id="clave" autocomplete="off" placeholder="23/08/2025  o  23 de agosto de 2025" /></div>
         <div class="actions" style="margin-top:8px;">
           <button class="btn" id="enterBtn">Abrir carta</button>
           <div class="hint">Pista: Es nuestra fecha especial 💕</div>
         </div>
-
-        <div id="msg" class="error" role="alert" aria-live="polite" style="display:none;"></div>
-
-        <div class="footer-note">
-          <div>Si no recuerda la fecha exacta pruebe con varios formatos.</div>
-        </div>
+        <div id="msg" class="error" style="display:none;"></div>
+        <div class="footer-note"><div>Si no recuerda la fecha exacta pruebe con varios formatos.</div></div>
       </form>
     </div>
   </div>
@@ -230,7 +139,6 @@
     t = t.replace(/^\/|\/$/g,'');
     return t;
   }
-
   function isCorrect(input){
     const n = normalize(input);
     const variants = new Set([
@@ -242,34 +150,19 @@
     if(compact.includes('23082025') || compact.includes('23agosto2025') || compact.includes('23august2025')) return true;
     return false;
   }
-
   document.getElementById('enterBtn').addEventListener('click', function(){
     const input = document.getElementById('clave').value || '';
     const msg = document.getElementById('msg');
     if(isCorrect(input)){
       msg.style.display='none';
-      this.disabled=true;
-      this.innerText='Accediendo...';
-      this.style.opacity=0.9;
-      setTimeout(()=> {
-        window.location.href = 'carta.html';
-      }, 700);
+      this.disabled=true;this.innerText='Accediendo...';this.style.opacity=0.9;
+      setTimeout(()=> { window.location.href = 'indice.html'; }, 700);
     } else {
       msg.style.display='block';
       msg.innerText = 'Fecha incorrecta. Intenta con: 23/08/2025 o "23 de agosto de 2025".';
-      const box = document.querySelector('.card');
-      box.animate([
-        { transform:'translateX(0)' },
-        { transform:'translateX(-8px)' },
-        { transform:'translateX(8px)' },
-        { transform:'translateX(-6px)' },
-        { transform:'translateX(6px)' },
-        { transform:'translateX(0)' }
-      ], { duration:380, easing:'ease-out' });
     }
   });
-
-  document.getElementById('clave').addEventListener('keydown', function(e){
+  document.getElementById('clave').addEventListener('keydown', e=>{
     if(e.key === 'Enter'){ document.getElementById('enterBtn').click(); }
   });
 </script>

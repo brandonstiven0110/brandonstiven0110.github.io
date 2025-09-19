@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartas 💌</title>
+  <style>
+    body{
+      font-family: Poppins, sans-serif;
+      background: linear-gradient(120deg,#ffeef8,#ffc9f0);
+      padding:40px;
+      color:#6a2c4b;
+    }
+    h1{
+      text-align:center;
+      color:#ff4d94;
+      margin-bottom:30px;
+    }
+    .card-list{
+      display:grid;
+      gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      max-width:1000px;
+      margin:auto;
+    }
+    .card{
+      background: rgba(255,255,255,0.75);
+      border-radius:18px;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position:relative;
+    }
+    .card:hover{
+      transform: translateY(-8px);
+      box-shadow:0 16px 32px rgba(255,77,148,0.25);
+    }
+    .card img{
+      width:80px;
+      height:80px;
+      object-fit:contain;
+      margin-bottom:10px;
+    }
+    .card h3{
+      margin:8px 0;
+      color:#ff4d94;
+      font-size:18px;
+    }
+    .open-btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:8px 16px;
+      border-radius:10px;
+      background:linear-gradient(90deg,#ff86bf,#ff4d94);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.2s;
+      box-shadow:0 6px 16px rgba(255,77,148,0.2);
+    }
+    .open-btn:hover{
+      background:linear-gradient(90deg,#ff4d94,#d8006e);
+      box-shadow:0 10px 24px rgba(255,77,148,0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>Tus Cartas 💖</h1>
+  <div class="card-list">
+    <div class="card">
+      <img src="https://pngimg.com/d/hello_kitty_PNG22.png" alt="Hello Kitty">
+      <h3>Carta 1</h3>
+      <a href="carta1.html" class="open-btn">Abrir 💌</a>
+    </div>
+    <div class="card">
+      <img src="https://pngimg.com/d/hello_kitty_PNG20.png" alt="Hello Kitty">
+      <h3>Carta 2</h3>
+      <a href="carta2.html" class="open-btn">Abrir 💌</a>
+    </div>
+    
+  </div>
+</body>
+</html>
